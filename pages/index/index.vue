@@ -23,7 +23,8 @@
 				<view class="flex align-center justify-center text-light-muted" style="width: 70rpx;height: 70rpx;position: absolute;top: 0;left: 0;">
 					<text class="iconfont icon-sousuo"></text>
 				</view>
-				<uni-search-bar  :radius="20"  placeholder="搜索网盘文件" @confirm="search" cancelButton="none"></uni-search-bar>
+				<!-- <uni-search-bar :radius="20"  placeholder="搜索网盘文件" @confirm="search" cancelButton="none"></uni-search-bar> -->
+				<input style="height: 70rpx;padding-left: 70rpx;" type="text" class="bg-light font-md rounded-circle" placeholder="搜索网盘文件"/>
 			</view>
 		</view>
 	</view>
@@ -31,11 +32,11 @@
 
 <script>
 import navBar from '@/components/common/nav-bar.vue';
-import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue';
+// import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue';
 export default {
 	components: {
-		navBar,
-		uniSearchBar
+		navBar
+		// uniSearchBar
 	},
 	data() {
 		return {
@@ -48,4 +49,5 @@ export default {
 </script>
 
 <style>
+	
 </style>
