@@ -2,7 +2,7 @@
 	<view>
 		<!-- 自定义导航栏 -->
 		<nav-bar>
-			<text slot="left" class="font-md ml-3 text-white">首页</text>
+			<text slot="left" class="font-md ml-3">首页</text>
 			<template slot="right">
 				<view
 					class="flex align-center justify-center bg-icon rounded-circle mr-3"
@@ -18,17 +18,24 @@
 				</view>
 			</template>
 		</nav-bar>
-		<view class="flex" style="height: 1000px;">
-			
+		<view class="px-3 py-2">
+			<view class="position-relative">
+				<view class="flex align-center justify-center text-light-muted" style="width: 70rpx;height: 70rpx;position: absolute;top: 0;left: 0;">
+					<text class="iconfont icon-sousuo"></text>
+				</view>
+				<uni-search-bar  :radius="20"  placeholder="搜索网盘文件" @confirm="search" cancelButton="none"></uni-search-bar>
+			</view>
 		</view>
 	</view>
 </template>
 
 <script>
 import navBar from '@/components/common/nav-bar.vue';
+import uniSearchBar from '@/components/uni-search-bar/uni-search-bar.vue';
 export default {
 	components: {
-		navBar
+		navBar,
+		uniSearchBar
 	},
 	data() {
 		return {
